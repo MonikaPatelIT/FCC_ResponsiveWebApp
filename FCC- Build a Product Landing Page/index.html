@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>FCC - Product Landing  Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css'>
+<link rel='stylesheet' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.1.0/css/all.css'>
+
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      html,
+body {
+    height: 100%;
+}
+
+#header {
+    height: 100%;
+    background: url("https://lh3.googleusercontent.com/YzcQ5fuqG-STPggRVhnm96ffunFXvZGtnz7R8de5WVFxUEeArmlXv4oM7EiOyoGeIAy9mzQh4TAMqLljz-MLBmCZvc85qfVXLHpNn6pcTXd1tJQCZ9M_FRm5k5J2-bo7z2a5JIfCCg=w2400") no-repeat center center fixed;
+    background-size: cover;
+}
+
+#header-img {
+    max-width: 50%;
+    max-height: 50%;
+    animation-duration: 1s;
+    animation-name: Rotateme;
+    animation-iteration-count: infinite;
+}
+
+#email-me, #form {
+    display: none;
+}
+
+section {
+    min-height: 100%;
+}
+
+#header-img:hover {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+footer {
+    align-self: flex-end;
+    width: 100%;
+    position: relative;
+    background-color: #77a8a8;
+}
+
+.footer a {
+    color: black;
+}
+/*Logo image rotation*/
+@keyframes Rotateme {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(270deg);
+    }
+
+    75% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.navbar-brand {
+    color: #622569 !important;
+    font-weight: 800;
+    font-size: 2em;
+}
+
+section h2 {
+    color: #EAB543 !important;
+    text-transform: capitalize;
+}
+.nav-link {
+    color: #622569 !important;
+    font-weight: 500;
+    font-size:1.3em;
+}
+
+    .nav-link.active {
+        color: #EAB543 !important;
+        font-weight: 500;
+        
+    }
+
+.add-to-cart {
+    border: 1px solid #b0aac0;
+    background-color: #622569;
+    color: white;
+}
+
+    .add-to-cart:hover {
+        background-color: #b0aac0;
+}
+/*Shopping cart card effect*/
+#cart-items {
+    position: absolute;
+    top: 90%;
+    right: 0%;
+    z-index: 999;
+    border: 0px !important;
+    display: none;
+    color: #622569;
+}
+
+
+#items-basket {
+    position: absolute;
+    display: none;
+    top: -5px;
+    left: -10px;
+    width: 1.45rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+
+.remove {
+    cursor: pointer;
+}
+
+.cart {
+    float: right;
+    text-align: center;
+    color: #622569;
+    position: relative;
+}
+
+.remove {
+    color: Red;
+}
+
+/* Hidden and visible elemnt from Bootsrap3.0 */
+/*\
+ * Restore Bootstrap 3 "hidden" utility classes.
+\*/
+
+/* Breakpoint XS */
+@media (max-width: 575px) {
+    .hidden-xs-down, .hidden-sm-down, .hidden-md-down, .hidden-lg-down, .hidden-xl-down,
+    .hidden-xs-up,
+    .hidden-unless-sm, .hidden-unless-md, .hidden-unless-lg, .hidden-unless-xl {
+        display: none !important;
+    }
+
+    #header {
+        background-position: 80% 80%;
+    }
+}
+
+
+/* Breakpoint SM */
+@media (min-width: 576px) and (max-width: 767px) {
+    .hidden-sm-down, .hidden-md-down, .hidden-lg-down, .hidden-xl-down,
+    .hidden-xs-up, .hidden-sm-up,
+    .hidden-unless-xs, .hidden-unless-md, .hidden-unless-lg, .hidden-unless-xl {
+        display: none !important;
+    }
+
+    #header {
+        background-position: 80% 80%;
+    }
+}
+
+/* Breakpoint MD */
+@media (min-width: 768px) and (max-width: 991px) {
+    .hidden-md-down, .hidden-lg-down, .hidden-xl-down,
+    .hidden-xs-up, .hidden-sm-up, .hidden-md-up,
+    .hidden-unless-xs, .hidden-unless-sm, .hidden-unless-lg, .hidden-unless-xl {
+        display: none !important;
+    }
+
+    #header {
+        background-position: 80% 80%;
+    }
+}
+
+/* Breakpoint LG */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .hidden-lg-down, .hidden-xl-down,
+    .hidden-xs-up, .hidden-sm-up, .hidden-md-up, .hidden-lg-up,
+    .hidden-unless-xs, .hidden-unless-sm, .hidden-unless-md, .hidden-unless-xl {
+        display: none !important;
+    }
+}
+
+/* Breakpoint XL */
+@media (min-width: 1200px) {
+    .hidden-xl-down,
+    .hidden-xs-up, .hidden-sm-up, .hidden-md-up, .hidden-lg-up, .hidden-xl-up,
+    .hidden-unless-xs, .hidden-unless-sm, .hidden-unless-md, .hidden-unless-lg {
+        display: none !important;
+    }
+}
+
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+   <header id="header" class="d-flex align-items-center scroll-Active">
+        <nav class="navbar navbar-expand-lg navbar-dark  fixed-top" style="background-color:#77a8a8" id="nav-bar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#page-top"><img id="header-img" src="https://lh3.googleusercontent.com/XASV0g9oq7hluQSk8--CFpNEL3ro6yXJaWYfa9HlN8QpL8agKN_xmo4TJ8iHHeaF3HrJSiHltPugSxDkPT6iWLIR1x9dILDKZc8TATLSZ5nWPewsTfj7BKD8pg6ugZtXrd98zH7R-A=s64-p-k" width="40px" alt="logo" /> <span class="hidden-sm-down">Succulent Seeker</span> <span class="hidden-md-up"> SS </span></a>
+
+                <div class="" id="navbarResponsive">
+                    <ul class="navbar-expand navbar-nav ml-auto">
+                        <li class="nav-item pl-2 pr-2">
+                            <a class="nav-link js-scroll-trigger" href="#header"><i class="fas fa-home hidden-md-up" style="font-size:1.5em"></i><span class="hidden-sm-down"> Home</span></a>
+                        </li>
+                        <li class="nav-item pl-2 pr-2">
+                            <a class="nav-link js-scroll-trigger" href="#Product"> <i class="fas fa-list-alt hidden-md-up" style="font-size:1.5em"></i> <span class="hidden-sm-down">Product </span></a>
+                        </li>
+                        <li class="nav-item pl-2 pr-2">
+                            <a class="nav-link js-scroll-trigger" href="#Tutorial"><i class="fas fa-video hidden-md-up" style="font-size:1.5em"></i><span class="hidden-sm-down">Tutorial Video </span></a>
+                        </li>
+                        <li class="nav-item pl-2 pr-2" style="border-bottom:1px solid #622569;">
+                            <div class="cart text-center">
+                                <i class="fa fa-shopping-basket fa-2x shopping-cart"></i>
+                                <i class="fa fa-caret-down"></i>
+                                <!--br-->
+                                <span id="items-basket">0</span>
+                            </div>
+                            <div id="cart-items" class="card text-center col-lg-3 col-md-3 col-sm-6 col-xs-6 offset-sm-1" style="background-color:#77a8a8">
+                                <div class="card-body">
+                                    <span id="emptyCart">Your shopping cart is EMPTY </span>
+                                    <ol class="list-group list-group-flush" id="list-item"></ol>
+                                </div>
+                                <div class="card-title">Total : <span id="total-price">$0</span></div>
+                                <div class="card-body d-flex">
+                                    <span id="email-me"> Email me the list </span>
+                                    <form class="form-inline justify-content-center" id="form">
+                                        <div class="form-group row">
+                                            <input type="email" id="inputemail" class="form-control" placeholder="name@example.com"> <i class="fas fa-paper-plane m-2"></i>
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container text-center">
+                        <div class="row align-left my-auto">
+                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 justify-content-center  pt-5 pb-5 py-5" style="background-color:#b0aac0; opacity:0.9">
+                    <h2 class="align-left" style="color:#622569"><strong>Succulent                       Seeker</strong></h2>
+                    <h4 class=" align-left"><strong>THINKING OF BUYING A PLANT?</strong></h4>
+                    <button type="button" class="btn btn-lg btn-default" style="background-color:#EAB543" id="checkout">Check Now</button>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="Product">
+        <div class="container-fluid">
+                        <div class="row mt-6 mb-3">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h2 class="align-left">
+                        Product list
+                    </h2>
+                </div>
+                            </div>
+            <div class="row justify-content-center align-items-start">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+                    <div class="item">
+                        <img class="img-thumbnail" src="https://www.broadviewflower.com/wp-content/uploads/2018/02/succulent-plant.jpg" alt="" />
+
+                        <div class="row text-center">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <h4 class="product-name">Product title</h4>
+                            </div>
+                            <div class="col-lg-6 col-md-6 product-price">
+                                $15.00
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <button class="btn add-to-cart" type="button">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+                    <div class="item">
+                        <img class="img-thumbnail" src="https://lh3.googleusercontent.com/I7ovxWdJH95VEOjWQpHLA5E_uxQFdX6LO5g03T0ChGOOFCkqwSrFwFA5sbyJycB_8SmdHIMDdaqoZPY-cSl1NREr5I07irn_qiYl3h10LninxBqGEMhFNDKwuFEg0NyHq58pVaZ4ZQ=w2400" alt="" />
+                        <div class="row text-center">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <h4 class="product-name">Product title</h4>
+                            </div>
+                            <div class="col-lg-6 col-md-6 product-price">
+                                $15.00
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <button class="btn  add-to-cart" type="button">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+                    <div class="item">
+                        <img class="img-thumbnail" src="https://lh3.googleusercontent.com/o-yhCf_xw9dSxEZsYQLJ3EtNANUK6MVfp1SeeW9zgA3mTHSOpfbtKr3blDwI0cZGLI5XrElLXQU8A-d-z6eDUQCoWnY8dvjZ6mPkc11qc7Cd1-Pn8FDaKEtKx_V9tzFrJN2OhGGOkg=w2400" alt="" />
+                        <div class="row text-center">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <h4 class="product-name">Product title</h4>
+                            </div>
+                            <div class="col-lg-6 col-md-6 product-price">
+                                $15.00
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <button class="btn  add-to-cart" type="button">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+                    <div class="item">
+                        <img class="img-thumbnail" src="https://lh3.googleusercontent.com/Lxg0AO_2cYNvtIeRo1XFi_GZcm1xzC9wWUWNbSvqdFPKQcg_CBLEXGnYKKjPR723Qz5x90v1FJEumso49uNtbTQcH_PaIo7U3bfhiMjVRClTpg4bZiqLICAth5HVd4pMTEnQuMUDIg=w2400" alt="" />
+                        <div class="row text-center">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <h4 class="product-name">Product title</h4>
+                            </div>
+                            <div class="col-lg-6 col-md-6 product-price">
+                                $15.00
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <button class="btn  add-to-cart" type="button">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+                    <div class="item">
+                        <img class="img-thumbnail" src="https://lh3.googleusercontent.com/SXt5pWVzehAOJKRbDEeoRKRZfJLZiARab4cU6q6eGhBUMcYbZAB32qHXsikKs8lXaDFDZkjA7xCZF10vW_XDKjaVxf1fVcwkpK7HFKj9xL_9WgmqDtMvTJZ9OECKhUtEILRrq954gg=w2400" alt="" />
+                        <div class="row text-center">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <h4 class="product-name">Product title</h4>
+                            </div>
+                            <div class="col-lg-6 col-md-6 product-price">
+                                $15.00
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <button class="btn  add-to-cart" type="button">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+                    <div class="item">
+                        <img class="img-thumbnail" src="https://lh3.googleusercontent.com/vpNafP1g1w8xawqC_DtKlF1oVg6Yq9MeQnr3hg8r2pw4r7P1sSEHXe9rLoYdYvISs2L4wal80tRXEOwmo_T5eHBq4loahIsM6bbesplFiHMr1j4S3-I2jRk73mWOYhaMHLjQqoDlGA=w2400" alt="" />
+                        <div class="row text-center">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <h4 class="product-name">Product title</h4>
+                            </div>
+                            <div class="col-lg-6 col-md-6 product-price">
+                                $15.00
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <button class="btn  add-to-cart" type="button">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+                    <div class="item">
+                        <img class="img-thumbnail" src="https://lh3.googleusercontent.com/s-aV0AscfvAPvvkGOwwdg21YR4ynpkqNDEodbxu4Gk5AQH6xizTlkChm2-UpR1n0c1XbMwoQPZ3tkoOulvzOQUqFkS2uHbVEqUuaiBbtA1BC6Ue47qsVlXfUDyoz-ZJK6eWFXVxk7Q=w2400" alt="" />
+                        <div class="row text-center">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <h4 class="product-name">Product title</h4>
+                            </div>
+                            <div class="col-lg-6 col-md-6 product-price">
+                                $15.00
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <button class="btn  add-to-cart" type="button">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+                    <div class="item">
+                        <img class="img-thumbnail" src="https://lh3.googleusercontent.com/2gTgHD2LXxvTika2mmHnPbPK3rjUsWtb5K5E1YPeF-3ghw4CuG6Bev5bBRPoFdbv2jTfGJqm69b48kEgIsOUOJfmKQuITTK-YiFyA9wXNq4lAZ5pIqybVn-jo_EE14WCSuAlY8d1qg=w2400" alt="" />
+                        <div class="row text-center">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <h4 class="product-name">Product title</h4>
+                            </div>
+                            <div class="col-lg-6 col-md-6 product-price">
+                                $15.00
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <button class="btn  add-to-cart" type="button">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="Tutorial">
+        <div class="container-fluid d-flex flex-column">
+            <div class="row mt-3 mb-3">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h2 class="align-left">
+                        Tutorial video
+                    </h2>
+                </div>
+
+            </div>
+            <div class="row justify-content-center align-items-start">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe id="video" class="embed-responsive-item" style="border: 1px solid #dee2e6;
+  border-radius: 0.25rem;" src="https://www.youtube.com/embed/AazGHjPqgLs?wmode=transparent&amp;rel=0&amp;showinfo=0" allowfullscreen=""></iframe>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center align-items-center my-auto footer">
+
+                    <ul class="navbar-expand navbar-nav">
+                        <li class="nav-item pl-2 pr-2">
+                            <a href="https://www.linkedin.com/in/monikapatelit/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        </li>
+                        <li class="nav-item pl-2 pr-2">
+                            <a href="https://www.freecodecamp.org/monikapatelit" target="_blank"><i class="fab fa-free-code-camp"></i></a>
+                        </li>
+
+                        <li class="nav-item pl-2 pr-2" style="border-bottom:1px solid gray;">
+                            Designed with
+                            <i class="fab fa-gratipay"></i> by <a href="https://codepen.io/IamMonikaPatel/" target="_blank"> Monika Patel </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+<script src='https://blackrockdigital.github.io/startbootstrap-scrolling-nav/vendor/bootstrap/js/bootstrap.bundle.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+html,
+body {
+    height: 100%;
+}
+
+#header {
+    height: 100%;
+    background: url("https://lh3.googleusercontent.com/YzcQ5fuqG-STPggRVhnm96ffunFXvZGtnz7R8de5WVFxUEeArmlXv4oM7EiOyoGeIAy9mzQh4TAMqLljz-MLBmCZvc85qfVXLHpNn6pcTXd1tJQCZ9M_FRm5k5J2-bo7z2a5JIfCCg=w2400") no-repeat center center fixed;
+    background-size: cover;
+}
+
+#header-img {
+    max-width: 50%;
+    max-height: 50%;
+    animation-duration: 1s;
+    animation-name: Rotateme;
+    animation-iteration-count: infinite;
+}
+
+#email-me, #form {
+    display: none;
+}
+
+section {
+    min-height: 100%;
+}
+
+#header-img:hover {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+footer {
+    align-self: flex-end;
+    width: 100%;
+    position: relative;
+    background-color: #77a8a8;
+}
+
+.footer a {
+    color: black;
+}
+/*Logo image rotation*/
+@keyframes Rotateme {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(270deg);
+    }
+
+    75% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.navbar-brand {
+    color: #622569 !important;
+    font-weight: 800;
+    font-size: 2em;
+}
+
+section h2 {
+    color: #EAB543 !important;
+    text-transform: capitalize;
+}
+.nav-link {
+    color: #622569 !important;
+    font-weight: 500;
+    font-size:1.3em;
+}
+
+    .nav-link.active {
+        color: #EAB543 !important;
+        font-weight: 500;
+        
+    }
+
+.add-to-cart {
+    border: 1px solid #b0aac0;
+    background-color: #622569;
+    color: white;
+}
+
+    .add-to-cart:hover {
+        background-color: #b0aac0;
+}
+/*Shopping cart card effect*/
+#cart-items {
+    position: absolute;
+    top: 90%;
+    right: 0%;
+    z-index: 999;
+    border: 0px !important;
+    display: none;
+    color: #622569;
+}
+
+
+#items-basket {
+    position: absolute;
+    display: none;
+    top: -5px;
+    left: -10px;
+    width: 1.45rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+
+.remove {
+    cursor: pointer;
+}
+
+.cart {
+    float: right;
+    text-align: center;
+    color: #622569;
+    position: relative;
+}
+
+.remove {
+    color: Red;
+}
+
+/* Hidden and visible elemnt from Bootsrap3.0 */
+/*\
+ * Restore Bootstrap 3 "hidden" utility classes.
+\*/
+
+/* Breakpoint XS */
+@media (max-width: 575px) {
+    .hidden-xs-down, .hidden-sm-down, .hidden-md-down, .hidden-lg-down, .hidden-xl-down,
+    .hidden-xs-up,
+    .hidden-unless-sm, .hidden-unless-md, .hidden-unless-lg, .hidden-unless-xl {
+        display: none !important;
+    }
+
+    #header {
+        background-position: 80% 80%;
+    }
+}
+
+
+/* Breakpoint SM */
+@media (min-width: 576px) and (max-width: 767px) {
+    .hidden-sm-down, .hidden-md-down, .hidden-lg-down, .hidden-xl-down,
+    .hidden-xs-up, .hidden-sm-up,
+    .hidden-unless-xs, .hidden-unless-md, .hidden-unless-lg, .hidden-unless-xl {
+        display: none !important;
+    }
+
+    #header {
+        background-position: 80% 80%;
+    }
+}
+
+/* Breakpoint MD */
+@media (min-width: 768px) and (max-width: 991px) {
+    .hidden-md-down, .hidden-lg-down, .hidden-xl-down,
+    .hidden-xs-up, .hidden-sm-up, .hidden-md-up,
+    .hidden-unless-xs, .hidden-unless-sm, .hidden-unless-lg, .hidden-unless-xl {
+        display: none !important;
+    }
+
+    #header {
+        background-position: 80% 80%;
+    }
+}
+
+/* Breakpoint LG */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .hidden-lg-down, .hidden-xl-down,
+    .hidden-xs-up, .hidden-sm-up, .hidden-md-up, .hidden-lg-up,
+    .hidden-unless-xs, .hidden-unless-sm, .hidden-unless-md, .hidden-unless-xl {
+        display: none !important;
+    }
+}
+
+/* Breakpoint XL */
+@media (min-width: 1200px) {
+    .hidden-xl-down,
+    .hidden-xs-up, .hidden-sm-up, .hidden-md-up, .hidden-lg-up, .hidden-xl-up,
+    .hidden-unless-xs, .hidden-unless-sm, .hidden-unless-md, .hidden-unless-lg {
+        display: none !important;
+    }
+}
