@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>FCC - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.1.0/css/all.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css'>
+
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      
+/*----Font Face ---*/
+@font-face{font-family:Brandon;font-style:normal;font-weight:700;src:url(https://static-assets.strikinglycdn.com/fonts/brandon_bld-webfont.10b50ee4aa9930dd26ae117a07e922eb.eot);src:url(https://static-assets.strikinglycdn.com/fonts/brandon_bld-webfont.10b50ee4aa9930dd26ae117a07e922eb.eot?#iefix) format("embedded-opentype"),url(https://static-assets.strikinglycdn.com/fonts/brandon_bld-webfont.2bf5f4d8928806f7c91c290b5814aff9.woff) format("woff"),url(https://static-assets.strikinglycdn.com/fonts/brandon_bld-webfont.70c7d99488f7e8cf27634e9c58bf6217.ttf) format("truetype"),url(https://static-assets.strikinglycdn.com/fonts/brandon_bld-webfont.44a3e64aa120d1b7964f10be29ad878b.svg#BrandonGrotesqueBoldRegular) format("svg")}@font-face{font-family:Brandon;font-style:normal;font-weight:500;src:url(https://static-assets.strikinglycdn.com/fonts/brandon_reg-webfont.662dee687e0069f714f79db9bde55f81.eot);src:url(https://static-assets.strikinglycdn.com/fonts/brandon_reg-webfont.662dee687e0069f714f79db9bde55f81.eot?#iefix) format("embedded-opentype"),url(https://static-assets.strikinglycdn.com/fonts/brandon_reg-webfont.64088d528192c8fce171860f56a14a9f.woff) format("woff"),url(https://static-assets.strikinglycdn.com/fonts/brandon_reg-webfont.04206b825348a69ee85b523c1e67a70f.ttf) format("truetype"),url(https://static-assets.strikinglycdn.com/fonts/brandon_reg-webfont.348bd0ea620c7861d0c3ac028ba911ed.svg#BrandonGrotesqueRegularRg) format("svg")}@font-face{font-family:Brandon;font-style:normal;font-weight:300;src:url(https://static-assets.strikinglycdn.com/fonts/brandon_light-webfont.d23193b7e25a59254d67a04a9f6d4eaa.eot);src:url(https://static-assets.strikinglycdn.com/fonts/brandon_light-webfont.d23193b7e25a59254d67a04a9f6d4eaa.eot?#iefix) format("embedded-opentype"),url(https://static-assets.strikinglycdn.com/fonts/brandon_light-webfont.90829ddb7531a53c1dcd670d545999d2.woff) format("woff"),url(https://static-assets.strikinglycdn.com/fonts/brandon_light-webfont.2c18926b679dfb8abff6fc13c2b8beeb.ttf) format("truetype"),url(https://static-assets.strikinglycdn.com/fonts/brandon_light-webfont.518c0c41a5141b2e59732f43d9b70575.svg#BrandonGrotesqueLight) format("svg")}@font-face{font-family:Brandon;font-style:normal;font-weight:600;src:url(https://static-assets.strikinglycdn.com/fonts/brandon_med-webfont.78c65e04664b2559e1ca630e2606c3b5.eot);src:url(https://static-assets.strikinglycdn.com/fonts/brandon_med-webfont.78c65e04664b2559e1ca630e2606c3b5.eot?#iefix) format("embedded-opentype"),url(https://static-assets.strikinglycdn.com/fonts/brandon_med-webfont.43b22b68b4b50438a8c9d5ed49507204.woff) format("woff"),url(https://static-assets.strikinglycdn.com/fonts/brandon_med-webfont.b2cf0cf708268a04055c5d8545d811a4.ttf) format("truetype"),url(https://static-assets.strikinglycdn.com/fonts/brandon_med-webfont.785c578a01a0d60f61ad665fe481306d.svg#BrandonGrotesqueMedium) format("svg")}
+/* End font face*/
+html,
+body {
+height: 100%;
+ font-family: "brandon grotesque", brandon, helvetica, sans-serif;
+}
+
+.headerImg{
+
+ -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+  background-size: cover;
+
+}
+#header {
+ height: 100%;
+  background-color: transparent; 
+ 
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
+  color:white;
+  text-shadow:0 1px 2px rgba(0,0,0,.2);
+
+ }
+
+.text-monika-patel p{
+  text-transform: uppercase;
+  font-size:110%;
+  
+ }
+.text-monika-patel p:before, .text-monika-patel p:after{
+  background:white;
+}
+
+.text-attention{
+    font-style: italic;
+}
+
+.section-title p{
+  text-transform: capitaliase;
+  font-size:90%;
+  
+}
+.section-title p:before, .section-title p:after
+{
+  background:black;
+}
+
+.text-decoration-background p{
+  display:inline-block;
+  position:relative;
+}
+.text-decoration-background p:before,
+.text-decoration-background p:after{
+     content: " ";
+    display: inline-block;
+    height: 2px;
+    margin: 0 10px;
+    position: absolute;
+    top: 50%;
+    width: 80px;    
+   
+}
+.text-decoration-background p:before {
+  right: 100%;
+  margin-right: 15px;
+}
+.text-decoration-background p:after {
+  left: 100%;
+  margin-left: 15px;
+  
+}
+
+section {
+    min-height: 100%;
+}
+/*Work Section*/
+
+#work{
+  background-color:#f2f2f2;
+}
+.work-company{
+color:#414656;
+  font-size:110%;
+  Font-weight:600; 
+}
+.work-role{
+ Font-weight:700; 
+}
+.work-location{
+  color:#fd5f00;
+}
+.work-desciption{
+   
+}
+.role-details{
+  text-align:left;
+}
+
+/* End Work Section */
+/*pastime */
+#image-Gallary .row > div {
+      padding: 0 4px !important;
+}
+
+#pastime img {
+    margin-top: 8px;
+    vertical-align: middle;
+  
+}
+ 
+footer {
+    
+    background-color: #f2f2f2;
+}
+
+footer .social{
+   text-shadow: 1px 1px 1px #ccc;
+  color:#5e5e5e;
+  
+  font-size:5em;
+}
+footer .social:hover{
+   text-shadow: 1px 1px 1px #fff;
+  color:lightblue;
+}
+
+/*end pastime */
+/* Hidden and visible elemnt from Bootsrap3.0 */
+/*\
+ * Restore Bootstrap 3 "hidden" utility classes.
+\*/
+
+/* Breakpoint XS */
+@media (max-width: 575px) {
+    .hidden-xs-down, .hidden-sm-down, .hidden-md-down, .hidden-lg-down, .hidden-xl-down,
+    .hidden-xs-up,
+    .hidden-unless-sm, .hidden-unless-md, .hidden-unless-lg, .hidden-unless-xl {
+        display: none !important;
+    }
+
+   /*eader {
+    
+  background-position: 80% 80%;
+    
+
+ }*/
+  
+  .section-title p:before, .section-title p:after,.text-monika-patel p:before, .text-monika-patel p:after
+{
+  content:none;
+  }
+  .role-details{
+  text-align:center;
+}
+  footer .social{
+     font-size:3em;
+}
+
+}
+
+
+/* Breakpoint SM */
+@media (min-width: 576px) and (max-width: 767px) {
+    .hidden-sm-down, .hidden-md-down, .hidden-lg-down, .hidden-xl-down,
+    .hidden-xs-up, .hidden-sm-up,
+    .hidden-unless-xs, .hidden-unless-md, .hidden-unless-lg, .hidden-unless-xl {
+        display: none !important;
+    }
+/*#header {
+    
+  background-position: 80% 80%;
+
+
+ }*/
+    
+   footer .social{
+     
+     font-size:4em;
+}
+  
+}
+
+/* Breakpoint MD */
+@media (min-width: 768px) and (max-width: 991px) {
+    .hidden-md-down, .hidden-lg-down, .hidden-xl-down,
+    .hidden-xs-up, .hidden-sm-up, .hidden-md-up,
+    .hidden-unless-xs, .hidden-unless-sm, .hidden-unless-lg, .hidden-unless-xl {
+        display: none !important;
+    }
+/*#header {
+    
+  background-position: 80% 80%;
+    
+
+ }*/
+   
+}
+
+/* Breakpoint LG */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .hidden-lg-down, .hidden-xl-down,
+    .hidden-xs-up, .hidden-sm-up, .hidden-md-up, .hidden-lg-up,
+    .hidden-unless-xs, .hidden-unless-sm, .hidden-unless-md, .hidden-unless-xl {
+        display: none !important;
+    }
+  /*#header {
+    
+  background-position: 80% 80%;
+    
+
+ }*/
+}
+
+/* Breakpoint XL */
+@media (min-width: 1200px) {
+    .hidden-xl-down,
+    .hidden-xs-up, .hidden-sm-up, .hidden-md-up, .hidden-lg-up, .hidden-xl-up,
+    .hidden-unless-xs, .hidden-unless-sm, .hidden-unless-md, .hidden-unless-lg {
+        display: none !important;
+    }
+  
+}
+
+.card {
+    border-radius: 2px;
+ 
+}
+.card:hover {
+ 
+}
+.img-card img{
+  width:100%;
+  object-fit:cover; 
+  transition: all .25s ease;
+} 
+.img-card img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+.img-card img:hover{
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+}
+
+
+.card-title a {
+  color: #000;
+  text-decoration: none !important;
+}
+.card-more {
+  border-top: 1px solid #D4D4D4;
+}
+.card-more span {
+  padding:0.5rem;
+}
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+  <header id="header" class="d-flex align-items-center scroll-Active headerImg low_qua_Img" data-src="http://monikapatel.info/images/m4_lg.jpg">
+  <div class="container text-center">
+    <div class="row align-center my-auto">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center  pt-5 py-5" id="header-title">
+        <h3 class="text-attention">Hey, I am</h3>
+        <h1 class="text-monika-patel text-decoration-background">
+          <p><strong>Monika Patel</strong></p>
+        </h1>
+        <h4 class="text-position">
+          <p><strong>Full Stack Developer - Auckland NZ</strong></p>
+        </h4>
+      </div>
+    </div>
+  </div>
+</header>
+<section id="work" ">
+  <div class="container text-center">
+    <div class="row align-center my-auto">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center  pt-5 py-2">
+        <h2 class="section-title text-decoration-background  ">
+          <p><strong>Here what I have done</strong></p>
+        </h2>
+      </div>
+    </div>
+
+    <div class="row align-center my-auto p-3 d-flex">
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 text-center mb-3">
+        <div class="role-image">
+          <img src="http://monikapatel.info/images/work/sdl_low.png" alt="solution dynamics" class="img-thumbnail low_qua_Img" data-src="http://monikapatel.info/images/work/sdl.png" />
+        </div>
+      </div>
+      <div class="col-lg-8 col-md-8 col-sm-6 col-xs-6 role-details">
+        <div class="work-company">Solution Dynamics</div>
+        <div class="work-role">.Net Developer, Since Feb 2015</div>
+        <div class="work-location"> Auckland, NZ</div>
+        <div class="work-desciption text-justify">
+          We work on building amazing user experiences and software for data digitalizing. I helped carry out the top-to-bottom redesign, implementation of existing UI, and currently upgrading software written in 1985 making it more powerful. With those changes
+          bring an increase of speed of ~40% and new stylish and user friendly design increased selling growth ~58% in March 2018.
+
+        </div>
+
+      </div>
+    </div>
+    <div class="row align-center my-auto p-3 d-flex">
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 text-center mb-3">
+        <div class="role-image">
+          <img src="http://monikapatel.info/images/work/ace_low.png" alt="ace cars rental" class="img-thumbnail low_qua_Img" data-src="http://monikapatel.info/images/work/ace.png" />
+        </div>
+      </div>
+      <div class="col-lg-8 col-md-8 col-sm-6 col-xs-6  role-details">
+        <div class="work-company">ACE Rental Cars</div>
+        <div class="work-role">Front End Developer, Aug - Oct 2014</div>
+        <div class="work-location"> Auckland, NZ</div>
+        <div class="work-desciption text-justify">
+
+          ACE taught me to surround myself with people who pushed me to my limits. The contract role alongside brilliant developers, designers, and helping marketing manager laid the foundation for my Front end development career in New Zealand. I'm grateful for
+          the time I spent with these peers, whose work gave me a glimpse into the challenges.
+
+        </div>
+
+      </div>
+    </div>
+    <div class="row align-center my-auto p-3 d-flex">
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 text-center mb-3">
+        <div class="role-image">
+          <img src="http://monikapatel.info/images/work/tatvasoft_low.png" class="img-thumbnail low_qua_Img" alt="tatvasoft" data-src="http://monikapatel.info/images/work/tatvasoft.png" />
+        </div>
+      </div>
+      <div class="col-lg-8 col-md-8 col-sm-6 col-xs-6 role-details">
+        <div class="work-company">Tatvasoft Ltd </div>
+        <div class="work-role">Web Developer, Jan 2013 - March 2014</div>
+        <div class="work-location"> India</div>
+        <div class="work-desciption text-justify">
+          This summer was a rite of passage into software engineering professionalism. Tatvasoft's internship opened my eyes to exciting new fields, the customer-driven culture taught me that empathy matters so much, time well spent. Developers and designers blew
+          me away with their willingness to share their time and wisdom. The trust my teammates placed in me did wonders for my confidence in writing quality software. I continue to be inspired by this company as a permanent employee.
+        </div>
+
+      </div>
+    </div>
+    <div class="row align-center my-auto p-3 d-flex">
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 text-center mb-3">
+        <div class="role-image">
+          <img src="http://monikapatel.info/images/work/charusat_low.png" alt="Charusat" class="img-thumbnail low_qua_Img" data-src="http://monikapatel.info/images/work/charusat.png" />
+        </div>
+      </div>
+      <div class="col-lg-8 col-md-8 col-sm-6 col-xs-6 role-details ">
+        <div class="work-company">Charusat</div>
+        <div class="work-role">B.S. in Computer Science, earned May 2013</div>
+        <div class="work-location"> India</div>
+        <div class="work-desciption text-justify">
+          CHARUSAT presented unprecedented scale and diversity of opportunities. My four years of phenomenal professors across the disciplines pushed me to expand, challenge, and adjust my worldview. My engagement in CHARUSAT's tech & innovation initiatives exercised
+          my creative muscle, sparked my obsession with design, and strengthened my tolerance to adversity.
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+                                                 
+<section id="pastime">
+  <div class="container text-center">
+    <div class="row align-center my-auto">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center  pt-5 py-5">
+        <h2 class="section-title text-decoration-background">
+          <p><strong>In the pastime</strong></p>
+        </h2>
+        <p>I can be found at nearest park with my infinitely patient husband. </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid" id="pen-Gallary">
+    <div class="row align-center">
+      
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer id="contact">
+  <div class="container text-center">
+    <div class="row align-center my-auto">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center pt-5">
+        <h2 class="section-title text-decoration-background  ">
+          <p><strong>Don't be shy!</strong></p>
+        </h2>
+        <p>I like to meet new people. If you are looking for coding peer or chit-chat about life, please keep in touch.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container text-center">
+    <div class="row align-center my-auto p-3 d-flex">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 align-center">
+        <a href="https://www.linkedin.com/in/monikapatelit/" target="_blank"><i class="social fab fa-linkedin m-1"></i></a>
+
+        <a href="mailto:monikapatel.it@outlook.com"><i class="social fas fa-envelope-square m-1"></i></a>
+
+        <a href="https://github.com/MonikaPatelIT" target="_blank"><i class="social fab fa-github-square m-1"></i></a>
+
+      </div>
+
+    </div>
+  </div>
+</footer>
+  <script src='https://code.jquery.com/jquery-1.11.2.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
