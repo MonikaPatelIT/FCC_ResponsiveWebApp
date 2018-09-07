@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>FCC - Survey Form</title>
+  
+  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+     <div class="container h-100" id="main">
+
+        <div class="page-header  m-3">
+            <h1 class="text-center text-uppercase" id="title">Survey Form</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p-2" id="from">
+                <p class="col-12 text-center p-2" id="description" >Let us know how can we improve FCC</p>
+                <form id="survey-form">
+                    <div class="row m-1">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                            <label id="name-label"> Name :</label>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <input type="text" placeholder="Enter your name" required id="name" />
+                        </div>
+                    </div>
+                    <div class="row m-1">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                            <label id="email-label">   Email :</label>
+</div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <input type="email" placeholder="Enter your Email" required id="email" />
+                        </div>
+                    </div>
+                    <div class="row m-1">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <label id="number-label"> Age :</label> 
+</div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <input type="number" name="age" min="10" max="100" id="number" placeholder="24" />
+                        </div>
+                    </div>
+                    <div class="row m-1">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            Which option best describes your current role? :
+
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <select id="dropdown">
+                                <option value="volvo">Student</option>
+                                <option value="saab">Full time Job</option>
+                                <option value="mercedes">Part time job</option>
+                                <option value="audi">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row m-1">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            *How likely is that you would recommend freeCodeCamp to a friend?:
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <input type="radio" name="recommend" value="Definitely" > Definitely<br>
+                            <input type="radio" name="recommend" value="Maybe" > Maybe<br>
+                            <input type="radio" name="recommend" value="Not Sure" > Not Sure<br>
+                        </div>
+                    </div>
+                    <div class="row m-1">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            What do you like most in FCC :
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <select>
+                                <option value="volvo">Select an Option</option>
+                                <option value="saab">Challanges</option>
+                                <option value="mercedes">Projects</option>
+                                <option value="audi">Community</option>
+                                <option value="audi">Open source</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row m-1">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            Things that should be improved in the future
+                            (Check all that apply):
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-left">
+                            <input type="checkbox" value="Front-end Projects"> Front-end Projects<br>
+                            <input type="checkbox" value="Back-end Projects"> Back-end Projects<br>
+                            <input type="checkbox" value="Data Visualization"> Data Visualization<br>
+                        </div>
+                    </div>
+                    <div class="row m-1">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            Any Comments or Suggestions?
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <textarea rows="3" cols="20" placeholder="Enter your comment here..."></textarea>
+                                                       
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center p-2">
+                        <input type="submit" value="Submit" id="submit"/>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+  <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
+
+  
+
+</body>
+
+</html>

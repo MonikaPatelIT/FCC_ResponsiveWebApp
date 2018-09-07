@@ -1,0 +1,43 @@
+    body {
+            background-color: lightgoldenrodyellow;
+            font-size :1.85em;
+        }
+
+        #from {
+            background-color: lightgray;
+        }
+        input[type="text"]{
+            width :250px;
+        }
+
+        .row>div:nth-child(odd) {
+            text-align :right;
+        }
+        .row>div:nth-child(even) {
+            text-align: left;
+        }
+        p{
+            text-decoration :underline ;
+        }
+
+
+        @media (max-width: 576px) {
+
+            .row > div:nth-child(odd) {
+                text-align: left;
+            }
+
+            .row > div:nth-child(even) {
+                text-align: left;
+            }
+        }
+        @media (max-width: 767.98px) {
+            .row > div:nth-child(odd) {
+                text-align: left;
+            }
+
+            .row > div:nth-child(even) {
+                text-align: left;
+            }
+        }
+
